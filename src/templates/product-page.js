@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
-import '../components/bulma-carousel';
 
 export const ProductPageTemplate = ({
   image,
