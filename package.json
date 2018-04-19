@@ -5,6 +5,10 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.6.0",
+    "bulma-carousel": "^1.1.0",
+    "bulma-extensions": "^1.0.14",
+    "font-awesome": "^4.7.0",
+    "font-awesome-sass": "^4.7.0",
     "gatsby": "^1.9.213",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify-cms": "^1.0.9",

@@ -7,7 +7,7 @@ const FeatureGrid = ({ gridItems }) => (
       <div key={item.image} className="column is-4">
         <section className="section">
           <p className="has-text-centered">
-            <img alt="" src={item.image} />
+            <i class={`fa $(item.icon) fa-5x`}></i>
           </p>
           <p>{item.text}</p>
         </section>

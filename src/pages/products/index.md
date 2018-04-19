@@ -12,12 +12,13 @@ intro:
   blurbs:
     - image: /img/if_development_2290862.png
       text: 'We build breath-taking, responsive websites.'
+      icon: mobile
     - image: /img/if_responsive_2290863.png
       text: We build breath-taking native mobile applications.
+      icon: mobile
     - image: /img/if_network_2290861.png
-      text: >-
-        We build breath-taking web applications that work like Slack and
-        Spotify.
+      text: We build awesome apps
+      icon: mobile
   heading: What we offer
   description: >
     IntioLabs creates breathtaking custom applications that help you grow and

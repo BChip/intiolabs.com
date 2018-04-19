@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
+import '../../node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel';
 
 export const ProductPageTemplate = ({
   image,
@@ -54,44 +55,32 @@ export const ProductPageTemplate = ({
                   <p>{main.description}</p>
                 </div>
               </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image1.image}
-                          alt={main.image1.alt}
-                        />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <img
-                          style={{ borderRadius: '5px' }}
-                          src={main.image2.image}
-                          alt={main.image2.alt}
-                        />
-                      </article>
-                    </div>
+              <div className='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
+                <div className='carousel-container'>
+                  <div className='carousel-item has-background is-active'>
+                    <img className="is-background" src={main.image1.image} alt={main.image1.alt} width="400" height="150" />
+                    <div className="title">{main.image1.alt}</div>
                   </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <img
-                        style={{ borderRadius: '5px' }}
-                        src={main.image3.image}
-                        alt={main.image3.alt}
-                      />
-                    </article>
+                  <div className='carousel-item has-background'>
+                    <img className="is-background" src={main.image2.image} alt={main.image2.alt} width="400" height="150" />
+                    <div className="title">{main.image2.alt}</div>
+                  </div>
+                  <div className='carousel-item has-background'>
+                    <img className="is-background" src={main.image3.image} alt={main.image3.alt} width="400" height="150" />
+                    <div className="title">{main.image3.alt}</div>
+                  </div>
+                </div>
+                <div className="carousel-navigation is-centered">
+                  <div className="carousel-nav-left">
+                    <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                  </div>
+                  <div className="carousel-nav-right">
+                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
+              
               <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
-                style={{ backgroundImage: `url(${fullImage})` }}
-              />
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
               </h2>
