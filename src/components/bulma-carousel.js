@@ -244,14 +244,14 @@ class Carousel {
  * @method
  * @return {[type]} [description]
  */
-if(typeof document !== 'undefined'){
+
   document.addEventListener('DOMContentLoaded', function() {
     var carousels = document.querySelectorAll('.carousel, .hero-carousel');
     [].forEach.call(carousels, function(carousel) {
       new Carousel(carousel);
     });
   });
-}
+
 
 
 return Carousel;
