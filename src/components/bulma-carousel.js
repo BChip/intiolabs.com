@@ -6,7 +6,7 @@ class Carousel {
     // Determine click event depending on if we are on Touch device or not
     this._clickEvent = ('ontouchstart' in window) ? 'touchstart' : 'click';
     
-    this.element = typeof selector === 'string' ? window.document.querySelector(selector) : selector;
+    this.element = typeof selector === 'string' ? document.querySelector(selector) : selector;
     // An invalid selector or non-DOM node has been provided.
     if (!this.element) {
       throw new Error('An invalid selector or non-DOM node has been provided.');
@@ -244,9 +244,9 @@ class Carousel {
  * @method
  * @return {[type]} [description]
  */
-if(typeof window !== "undefined" && typeof window.document !== 'undefined'){
-  window.document.addEventListener('DOMContentLoaded', function() {
-    var carousels = window.document.querySelectorAll('.carousel, .hero-carousel');
+if(typeof document !== 'undefined'){
+  document.addEventListener('DOMContentLoaded', function() {
+    var carousels = document.querySelectorAll('.carousel, .hero-carousel');
     [].forEach.call(carousels, function(carousel) {
       new Carousel(carousel);
     });
