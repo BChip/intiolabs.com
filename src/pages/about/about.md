@@ -2,6 +2,7 @@
 contentType: about
 path: /about
 title: About Me
+cardTitle: Intiolabs
 ---
 This is a placeholder page.
 
