@@ -46,28 +46,28 @@ export default function Template ({ data }) {
           <h1 className='display-5 text-center grey'>{post.frontmatter.ourTechSkillsTitle}</h1>
           <div className="mini-bar m2 center"></div>
           <div className="languages text-center">
-            <div id="hexagon"><i className="fa devicon-javascript-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-go-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-php-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-python-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-javascript-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-go-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-php-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-python-plain"></i></div>
           </div>
           <div className="frameworks text-center">
-            <div id="hexagon"><i className="fa devicon-nginx-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-android-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-meteor-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-react-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-nodejs-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-docker-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-sass-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-nginx-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-android-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-meteor-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-react-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-nodejs-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-docker-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-sass-plain"></i></div>
           </div>
           <div className="other text-center">
             
-            <div id="hexagon"><i className="fa devicon-apple-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-mysql-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-git-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-linux-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-mongodb-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-html5-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-apple-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-mysql-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-git-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-linux-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-mongodb-plain"></i></div>
+            <div id="hexagon"><i className="icon devicon-html5-plain"></i></div>
             
           </div>
           <br /><br /><br />
@@ -76,7 +76,7 @@ export default function Template ({ data }) {
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
               <p>National Transaction Corporation is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-              <p className="h6">&copy; All right Reversed.<a className="text-green ml-2" href="http://www.intiolabs.com" target="_blank">IntioLabs</a></p>
+              <p className="h6">&copy; All right Reserved.<a className="text-green ml-2" href="http://www.intiolabs.com" target="_blank">IntioLabs</a></p>
             </div>
           </div>	
         </section>

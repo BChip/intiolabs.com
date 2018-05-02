@@ -152,7 +152,7 @@
 
 .other{
   margin-top: 25px;
-  .fa{
+  .icon{
     color: white;
     font-size: 50px;
     line-height: 60px;
@@ -165,7 +165,7 @@
 }
 .languages div{
   display: inline-block;
-  .fa{
+  .icon{
     color: white;
     font-size: 50px;
     line-height: 60px;
@@ -175,7 +175,7 @@
 
 .frameworks{
   margin-top: 25px;
-  .fa{
+  .icon{
     color: white;
     font-size: 50px;
     line-height: 60px;
@@ -243,4 +243,7 @@
 }
 #hexagon:hover:before{
   border-bottom: 25px solid #9CCB3B;
+}
+a{
+  color: #9CCB3B;
 }
