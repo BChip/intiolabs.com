@@ -11,6 +11,7 @@ import 'prismjs/themes/prism-twilight.css'
 
 // main site style
 import './index.scss'
+import './devicon-master/devicon.min.css'
 
 const TemplateWrapper = ({ children, data }) => {
   let user
@@ -22,17 +23,17 @@ const TemplateWrapper = ({ children, data }) => {
       <Helmet title={data.site.siteMetadata.title} />
       <div className='navbar navbar-expand-lg navbar-dark bg-primary'>
         <Container>
-          <Link to='/' className='navbar-brand'>{data.site.siteMetadata.title}</Link>
+          <Link to='/' className='navbar-brand'><img className="logo" src="/files/logo.png" /></Link>
           <ul className='nav navbar-nav'>
 
             {user && (
               <li className='nav-item'>
-                <a href='/admin' className='nav-link'>Admin</a>
+                <a href='/admin' className='nav-link grey'>Admin</a>
               </li>
             )}
 
             <li className='nav-item'>
-              <Link to='/about' className='nav-link'>About</Link>
+              <Link to='/about' className='nav-link grey'>About</Link>
             </li>
           </ul>
         </Container>
