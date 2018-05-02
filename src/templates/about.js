@@ -64,7 +64,7 @@ export default function Template ({ data }) {
             
             <div id="hexagon"><i className="fa devicon-apple-plain"></i></div>
             <div id="hexagon"><i className="fa devicon-mysql-plain"></i></div>
-            <div id="hexagon"><i className="fa devicon-github-plain"></i></div>
+            <div id="hexagon"><i className="fa devicon-git-plain"></i></div>
             <div id="hexagon"><i className="fa devicon-linux-plain"></i></div>
             <div id="hexagon"><i className="fa devicon-mongodb-plain"></i></div>
             <div id="hexagon"><i className="fa devicon-html5-plain"></i></div>

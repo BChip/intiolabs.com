@@ -11,7 +11,9 @@ import 'prismjs/themes/prism-twilight.css'
 
 // main site style
 import './index.scss'
-import './devicon-master/devicon.min.css'
+import 'font-awesome/css/font-awesome.css'
+import 'devicon/devicon.min.css'
+
 
 const TemplateWrapper = ({ children, data }) => {
   let user
