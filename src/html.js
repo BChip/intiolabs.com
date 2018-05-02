@@ -7,14 +7,12 @@ stylesStr = require(`!raw-loader!../public/styles.css`)
 module.exports = class HTML extends React.Component {
   render () {
     let css
-    if (process.env.NODE_ENV === `production`) {
       css = (
         <style
           id='gatsby-inlined-css'
           dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
       )
-    }
     return (
       <html {...this.props.htmlAttributes}>
         <head>
