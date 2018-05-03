@@ -95,7 +95,7 @@
 
   & > .pageContent {
     flex: 1;
-    overflow: auto;
+    overflow-x: hidden;
     padding-top: 10px;
   }
 }
@@ -143,11 +143,8 @@
 
 .media-left{
   img{
-    height: 300px;
+    height: auto;
   }
-}
-.media-body{
-  margin-left: 10px;
 }
 
 .other{
@@ -190,7 +187,7 @@
 #hexagon {
 	width: 100px;
 	height: 60px;
-	background: #5F6062;
+	background: #5a5a5a;
   position: relative;
   margin-left: 2px;
    top: 25px;
@@ -210,7 +207,7 @@
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-bottom: 25px solid #5F6062;
+	border-bottom: 25px solid #5a5a5a;
     -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -226,7 +223,7 @@
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-top: 25px solid #5F6062;
+	border-top: 25px solid #5a5a5a;
     -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;

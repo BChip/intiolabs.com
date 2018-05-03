@@ -54,7 +54,7 @@ class Template extends React.Component {
           <div className="mini-bar m2 center"></div>
             <Row>
               {post.frontmatter.projects ? 
-                post.frontmatter.projects.map(project => <Col xs="4"><Media><Media left href="#"><Media object className="img-responive" src={project.image} alt={project.alt} /></Media><Media body><Media heading>{project.title}</Media>{project.description}</Media></Media></Col>)
+                post.frontmatter.projects.map(project => <Col xs="4"><Row><Col><Media object className="img-fluid" src={project.image} alt={project.alt} /></Col><Col><Media body><Media heading>{project.title}</Media>{project.description}</Media></Col></Row></Col>)
               :
                 null
               }
