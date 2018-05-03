@@ -3,8 +3,25 @@ import { Container, Jumbotron, Card, Button, CardTitle, CardText, Row, Col, Medi
 import FontAwesome from 'react-fontawesome'
 import Helmet from 'react-helmet'
 import graphql from 'graphql'
+import Footer from '../components/Footer'
 
 class Template extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      hideHex: false
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+  }
+
+  resize() {
+    this.setState({hideHex: window.innerWidth <= 1000});
+  }
+
   render(){
     const { markdownRemark: post } = this.props.data
     return (
@@ -46,7 +63,21 @@ class Template extends React.Component {
         <Container className="m3">
           <h1 className='display-5 text-center grey'>{post.frontmatter.ourTechSkillsTitle}</h1>
           <div className="mini-bar m2 center"></div>
-          <div className="languages text-center">
+          {this.state.hideHex ? 
+            <Row>
+              <Col className="text-center">
+                <li>Fill me in</li>
+                <li>Python</li>
+                <li>javascript</li>
+              </Col>
+              <Col className="text-center">
+                <li>Fill me in</li>
+                <li>blah</li>
+              </Col>
+            </Row>
+            :
+            <div>
+            <div className="languages text-center">
             <div id="hexagon"><i className="icon devicon-javascript-plain"></i></div>
             <div id="hexagon"><i className="icon devicon-go-plain"></i></div>
             <div id="hexagon"><i className="icon devicon-php-plain"></i></div>
@@ -72,15 +103,10 @@ class Template extends React.Component {
             
           </div>
           <br /><br /><br />
-        </Container>
-        <section id="footer">	
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-              <p>National Transaction Corporation is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-              <p className="h6">&copy; All right Reserved.<a className="text-green ml-2" href="http://www.intiolabs.com" target="_blank">IntioLabs</a></p>
-            </div>
-          </div>	
-        </section>
+          </div>
+          }
+          </Container>
+        <Footer />
         {/*<Container dangerouslySetInnerHTML={{ __html: post.html }} />*/}
       </div>
     )
