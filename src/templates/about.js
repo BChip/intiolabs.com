@@ -4,11 +4,12 @@ import FontAwesome from 'react-fontawesome'
 import Helmet from 'react-helmet'
 import graphql from 'graphql'
 
-export default function Template ({ data }) {
-  const { markdownRemark: post } = data
+class Template extends React.Component {
+  render(){
+    const { markdownRemark: post } = this.props.data
     return (
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${data.site.siteMetadata.title}`} />
+        <Helmet title={`${post.frontmatter.title} | ${this.props.data.site.siteMetadata.title}`} />
         
         <Container className="m3">
           <Jumbotron style={{backgroundImage: `url(${post.frontmatter.jumboImage})`, backgroundSize: '100%'}}>
@@ -83,8 +84,10 @@ export default function Template ({ data }) {
         {/*<Container dangerouslySetInnerHTML={{ __html: post.html }} />*/}
       </div>
     )
-  
+  }
 }
+
+export default Template
 
 export const aboutPageQuery = graphql`
   query AboutPage($path: String!) {

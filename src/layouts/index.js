@@ -15,40 +15,40 @@ import 'font-awesome/css/font-awesome.css'
 import 'devicon/devicon.min.css'
 
 
-const TemplateWrapper = ({ children, data }) => {
-  let user
-  if (typeof window !== 'undefined') {
-    user = window.netlifyIdentity && window.netlifyIdentity.currentUser()
-  }
-  return (
-    <div className='App'>
-      <Helmet title={data.site.siteMetadata.title} />
-      <div className='navbar navbar-expand-lg navbar-dark bg-primary'>
-        <Container>
-          <Link to='/' className='navbar-brand'><img className="logo" src="/files/logo.png" /></Link>
-          <ul className='nav navbar-nav'>
+export default class TemplateWrapper extends React.Component{
+  render(){
+    let user
+    if (typeof window !== 'undefined') {
+      user = window.netlifyIdentity && window.netlifyIdentity.currentUser()
+    }
+    return (
+      <div className='App'>
+        <Helmet title={this.props.data.site.siteMetadata.title} />
+        <div className='navbar navbar-expand-lg navbar-dark bg-primary'>
+          <Container>
+            <Link to='/' className='navbar-brand'><img className="logo" src="/files/logo.png" /></Link>
+            <ul className='nav navbar-nav'>
 
-            {user && (
+              {user && (
+                <li className='nav-item'>
+                  <a href='/admin' className='nav-link grey'>Admin</a>
+                </li>
+              )}
+
               <li className='nav-item'>
-                <a href='/admin' className='nav-link grey'>Admin</a>
+                <Link to='/about' className='nav-link grey'>About</Link>
               </li>
-            )}
-
-            <li className='nav-item'>
-              <Link to='/about' className='nav-link grey'>About</Link>
-            </li>
-          </ul>
-        </Container>
+            </ul>
+          </Container>
+        </div>
+        <div className='pageContent'>{this.props.children()}</div>
+        
       </div>
-      <div className='pageContent'>{children()}</div>
-      
-    </div>
-  )
+    )
+  }
+  
 }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func
-}
 
 export const pageQuery = graphql`
   query LayoutIndexQuery {
@@ -59,5 +59,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-export default TemplateWrapper

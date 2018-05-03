@@ -3,21 +3,12 @@ import { Container, Card, CardText, CardBody, CardTitle, CardSubtitle, Jumbotron
 import Link from 'gatsby-link'
 import graphql from 'graphql'
 
-const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
-  return (
-    <div>
+class IndexPage extends React.Component {
+  render() {
+    const posts = this.props.data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
 
-    
-      <Container>
-        <Jumbotron style={{backgroundColor: "#000"}}>
-          <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-            <CardTitle>asdfsdf</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-          </Card>
-        </Jumbotron>
-      </Container>
-        
+    return (
+      <div>
       <Container>
         {posts.map(({ node: post }) => (
           <Card style={{marginBottom: 10}} key={post.id}>
@@ -30,7 +21,8 @@ const IndexPage = ({ data }) => {
       ))}
       </Container>
     </div>
-  )
+    );
+  }
 }
 
 export default IndexPage
