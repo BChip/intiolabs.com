@@ -109,37 +109,40 @@ class Template extends React.Component {
           <Container className="m3">
           <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
           <div className="mini-bar m2 center"></div>
-          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-            <div className="row form-group">
-              <label for="exampleEmail" className="col-sm-2 col-form-label">Name</label>
-              <div className="col-sm-10">
-                <input type="text" name="name" placeholder="Joe Daniels" className="form-control" />
-              </div>
-            </div>
-            <div className="row form-group">
-              <label for="exampleEmail" className="col-sm-2 col-form-label" >Email</label>
-              <div className="col-sm-10">
-                <input type="email" name="email" placeholder="joedaniels@intiolabs.com" className="form-control" />
-              </div>
-            </div>
-            <div className="row form-group">
-              <label for="exampleSelect" className="col-sm-2 col-form-label">Platforms</label>
-              <div className="col-sm-10">
-                <select name="platform" multiple="" type="select" className="form-control">
-                  <option>Web</option><option >Mobile</option><option >Desktop</option>
-                </select>
-              </div>
-            </div>
-            <div className="row form-group">
-              <label for="exampleText" className="col-sm-2 col-form-label">Message</label>
-              <div className="col-sm-10"><textarea name="message" type="textarea" className="form-control"></textarea>
-              </div>
-            </div>
-            <div style={{float:'right', marginRight: '5px'}} className="row form-group">
-              <div data-netlify-recaptcha="true"></div>
-              <button type="submit" className="btn btn-success">Submit</button>
-            </div>
-          </form>
+          <Form name="contactus" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <FormGroup row >
+          <Label for="exampleEmail" sm={2}>Name</Label>
+          <Col sm={10}>
+            <Input type="text" name="name" placeholder="Joe Daniels" />
+          </Col>
+        </FormGroup>
+        <FormGroup row >
+          <Label for="exampleEmail" sm={2}>Email</Label>
+          <Col sm={10}>
+            <Input type="email" name="email" placeholder="joedaniels@intiolabs.com" />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="exampleSelect" sm={2}>Platforms</Label>
+          <Col sm={10}>
+            <Input type="select" name="platform" multiple>
+              <option>Web</option>
+              <option>Mobile</option>
+              <option>Desktop</option>
+            </Input>
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="exampleText" sm={2}>Message</Label>
+          <Col sm={10}>
+            <Input type="textarea" name="message" />
+          </Col>
+        </FormGroup>
+        <FormGroup row style={{float: 'right', marginRight: '5px'}}>
+            <div data-netlify-recaptcha></div>
+            <Button type="submit" color="success">Submit</Button>
+        </FormGroup>
+      </Form>
         </Container>
         <Footer />
         {/*<Container dangerouslySetInnerHTML={{ __html: post.html }} />*/}
