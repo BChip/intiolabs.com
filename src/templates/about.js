@@ -110,34 +110,34 @@ class Template extends React.Component {
           <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
           <div className="mini-bar m2 center"></div>
           <form name="contact" method="POST" netlify>
-            <div class="row form-group">
-              <label for="exampleEmail" class="col-sm-2 col-form-label">Name</label>
-              <div class="col-sm-10">
-                <input type="text" name="name" placeholder="Joe Daniels" class="form-control" />
+            <div className="row form-group">
+              <label for="exampleEmail" className="col-sm-2 col-form-label">Name</label>
+              <div className="col-sm-10">
+                <input type="text" name="name" placeholder="Joe Daniels" className="form-control" />
               </div>
             </div>
-            <div class="row form-group">
-              <label for="exampleEmail" class="col-sm-2 col-form-label" >Email</label>
-              <div class="col-sm-10">
-                <input type="email" name="email" placeholder="joedaniels@intiolabs.com" class="form-control" />
+            <div className="row form-group">
+              <label for="exampleEmail" className="col-sm-2 col-form-label" >Email</label>
+              <div className="col-sm-10">
+                <input type="email" name="email" placeholder="joedaniels@intiolabs.com" className="form-control" />
               </div>
             </div>
-            <div class="row form-group">
-              <label for="exampleSelect" class="col-sm-2 col-form-label">Platforms</label>
-              <div class="col-sm-10">
-                <select name="platform" multiple="" type="select" class="form-control">
+            <div className="row form-group">
+              <label for="exampleSelect" className="col-sm-2 col-form-label">Platforms</label>
+              <div className="col-sm-10">
+                <select name="platform" multiple="" type="select" className="form-control">
                   <option>Web</option><option >Mobile</option><option >Desktop</option>
                 </select>
               </div>
             </div>
-            <div class="row form-group">
-              <label for="exampleText" class="col-sm-2 col-form-label">Message</label>
-              <div class="col-sm-10"><textarea name="message" type="textarea" class="form-control"></textarea>
+            <div className="row form-group">
+              <label for="exampleText" className="col-sm-2 col-form-label">Message</label>
+              <div className="col-sm-10"><textarea name="message" type="textarea" className="form-control"></textarea>
               </div>
             </div>
-            <div style="float:right;margin-right:5px;" class="row form-group">
+            <div style={{float:'right', marginRight: '5px'}} className="row form-group">
               <div data-netlify-recaptcha="true"></div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" className="btn btn-success">Submit</button>
             </div>
           </form>
         </Container>
