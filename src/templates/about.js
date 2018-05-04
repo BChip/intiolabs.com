@@ -78,7 +78,7 @@ class Template extends React.Component {
             :
             <Row>
               <Col xs="8">
-                <div className="m4">
+                <div className="m5">
                   <div className="languages text-center">
                     <div id="hexagon"><i className="icon devicon-javascript-plain"></i></div>
                     <div id="hexagon"><i className="icon devicon-go-plain"></i></div>
