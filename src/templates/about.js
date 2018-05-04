@@ -43,7 +43,7 @@ class Template extends React.Component {
           <p className='text-center grey'>{post.frontmatter.serviceDescription}</p>
           <Row>
             {post.frontmatter.services ? 
-              post.frontmatter.services.map(service => <Col className="text-center"><FontAwesome className="m1" size="5x" name={service.icon} /><p>{service.title}</p></Col>)
+              post.frontmatter.services.map(service => <Col className="text-center"><i style={{fontSize: '5rem'}} className={`grey icon devicon-${service.icon}-plain`}></i><p style={{paddingTop: '10px'}}>{service.title}</p></Col>)
             :
             null
             }

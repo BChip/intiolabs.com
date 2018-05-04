@@ -11,9 +11,9 @@ services:
     - title: A stylish landing page? A functional multi-page web site? Or maybe a complex web application with unique features? We can pull anything off!
       icon: chrome
     - title: Looking for someone to create a cool Android or iOS app for you? Well, traveller, you've found the right place!
-      icon: mobile
+      icon: android
     - title: Have no fear! We build elegant desktop applications as well!
-      icon: desktop
+      icon: windows8
 ourProjectsTitle: Our Work
 projects:
     - title: Manage Me
