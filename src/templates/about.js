@@ -109,7 +109,7 @@ class Template extends React.Component {
           <Container className="m3">
           <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
           <div className="mini-bar m2 center"></div>
-          <form name="contact" method="POST" netlify>
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <div className="row form-group">
               <label for="exampleEmail" className="col-sm-2 col-form-label">Name</label>
               <div className="col-sm-10">
