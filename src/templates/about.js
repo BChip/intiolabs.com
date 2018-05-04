@@ -76,34 +76,41 @@ class Template extends React.Component {
               </Col>
             </Row>
             :
-            <div>
-            <div className="languages text-center">
-            <div id="hexagon"><i className="icon devicon-javascript-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-go-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-php-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-python-plain"></i></div>
-          </div>
-          <div className="frameworks text-center">
-            <div id="hexagon"><i className="icon devicon-nginx-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-android-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-meteor-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-react-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-nodejs-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-docker-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-sass-plain"></i></div>
-          </div>
-          <div className="other text-center">
-            
-            <div id="hexagon"><i className="icon devicon-apple-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-mysql-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-git-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-linux-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-mongodb-plain"></i></div>
-            <div id="hexagon"><i className="icon devicon-html5-plain"></i></div>
-            
-          </div>
-          <br /><br /><br />
-          </div>
+            <Row>
+              <Col xs="8">
+                <div className="m4">
+                  <div className="languages text-center">
+                    <div id="hexagon"><i className="icon devicon-javascript-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-go-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-php-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-python-plain"></i></div>
+                  </div>
+                  <div className="frameworks text-center">
+                    <div id="hexagon"><i className="icon devicon-nginx-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-android-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-meteor-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-react-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-nodejs-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-docker-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-sass-plain"></i></div>
+                  </div>
+                  <div className="other text-center">
+                    <div id="hexagon"><i className="icon devicon-apple-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-mysql-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-git-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-linux-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-mongodb-plain"></i></div>
+                    <div id="hexagon"><i className="icon devicon-html5-plain"></i></div>
+                  </div>
+                </div>
+              </Col>
+              <Col xs="4">
+                <p>We are generalists—mastering many languages, platforms, and practices so they can choose the best one for each task.</p>
+                <p>This also helps us bring together different technologies, so we're well-suited to projects that cross several platforms. Imagining a wearable device that talks to a mobile app and stores data in the cloud? We can do that—all in-house, from strategy to deployment.</p>
+
+
+              </Col>
+            </Row>       
           }
           </Container>
           <Container className="m3">
