@@ -19,7 +19,7 @@ class Template extends React.Component {
   }
 
   resize() {
-    this.setState({hideHex: window.innerWidth <= 1000});
+    this.setState({hideHex: window.innerWidth <= 1200});
   }
 
   render(){
@@ -64,17 +64,10 @@ class Template extends React.Component {
           <h1 className='display-5 text-center grey'><span className="green">{'/* '}</span>{post.frontmatter.ourTechSkillsTitle}<span className="green">{' */'}</span></h1>
           <div className="mini-bar m2 center"></div>
           {this.state.hideHex ? 
-            <Row>
-              <Col className="text-center">
-                <li>Fill me in</li>
-                <li>Python</li>
-                <li>javascript</li>
-              </Col>
-              <Col className="text-center">
-                <li>Fill me in</li>
-                <li>blah</li>
-              </Col>
-            </Row>
+            <div>
+              <p>We are generalists—mastering many languages, platforms, and practices so they can choose the best one for each task.</p>
+              <p>This also helps us bring together different technologies, so we're well-suited to projects that cross several platforms. Imagining a wearable device that talks to a mobile app and stores data in the cloud? We can do that—all in-house, from strategy to deployment.</p>
+            </div>
             :
             <Row>
               <Col xs="8">
@@ -113,7 +106,7 @@ class Template extends React.Component {
             </Row>       
           }
           </Container>
-          <Container className="m3">
+          <Container className="m5">
           <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
           <div className="mini-bar m2 center"></div>
           <Form name="contactus" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
