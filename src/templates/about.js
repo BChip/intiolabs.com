@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Jumbotron, Card, Button, CardTitle, CardText, Row, Col, Media} from 'reactstrap'
+import { Container, Jumbotron, Card, Button, CardTitle, CardText, Row, Col, Media, Form, FormGroup, Label, Input, FormText} from 'reactstrap'
 import FontAwesome from 'react-fontawesome'
 import Helmet from 'react-helmet'
 import graphql from 'graphql'
@@ -31,26 +31,26 @@ class Template extends React.Component {
         <Container className="m3">
           <Jumbotron style={{backgroundImage: `url(${post.frontmatter.jumboImage})`, backgroundSize: '100%'}}>
             <Card body inverse>
-              <CardTitle className='display-4 grey'>{post.frontmatter.cardTitle}</CardTitle>
+              <CardTitle className='display-4 grey'><span className="green">{'{ '}</span>{post.frontmatter.cardTitle}<span className="green">{' }'}</span></CardTitle>
               <CardText className='grey'>{post.frontmatter.cardText}</CardText>
               <div className="mini-bar"></div>
             </Card>
           </Jumbotron>  
         </Container>
         <Container className="m3">
-          <h1 className='display-5 text-center grey'>{post.frontmatter.serviceTitle}</h1>
+          <h1 className='display-5 text-center grey'><span className="green">{'[ '}</span>{post.frontmatter.serviceTitle}<span className="green">{' ]'}</span></h1>
           <div className="mini-bar m2 center"></div>
           <p className='text-center grey'>{post.frontmatter.serviceDescription}</p>
           <Row>
             {post.frontmatter.services ? 
-              post.frontmatter.services.map(service => <Col className="text-center"><FontAwesome size="5x" name={service.icon} /><p>{service.title}</p></Col>)
+              post.frontmatter.services.map(service => <Col className="text-center"><FontAwesome className="m1" size="5x" name={service.icon} /><p>{service.title}</p></Col>)
             :
             null
             }
           </Row>
         </Container>
         <Container className="m3">
-          <h1 className='display-5 text-center grey'>{post.frontmatter.ourProjectsTitle}</h1>
+          <h1 className='display-5 text-center grey'><span className="green">{'< '}</span>{post.frontmatter.ourProjectsTitle}<span className="green">{' />'}</span></h1>
           <div className="mini-bar m2 center"></div>
             <Row>
               {post.frontmatter.projects ? 
@@ -61,7 +61,7 @@ class Template extends React.Component {
             </Row>
         </Container>
         <Container className="m3">
-          <h1 className='display-5 text-center grey'>{post.frontmatter.ourTechSkillsTitle}</h1>
+          <h1 className='display-5 text-center grey'><span className="green">{'/* '}</span>{post.frontmatter.ourTechSkillsTitle}<span className="green">{' */'}</span></h1>
           <div className="mini-bar m2 center"></div>
           {this.state.hideHex ? 
             <Row>
@@ -106,6 +106,43 @@ class Template extends React.Component {
           </div>
           }
           </Container>
+          <Container className="m3">
+          <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
+          <div className="mini-bar m2 center"></div>
+          <Form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <FormGroup row >
+          <Label for="exampleEmail" sm={2}>Name</Label>
+          <Col sm={10}>
+            <Input type="email" name="email" id="exampleEmail" placeholder="Joe Daniels" />
+          </Col>
+        </FormGroup>
+        <FormGroup row >
+          <Label for="exampleEmail" sm={2}>Email</Label>
+          <Col sm={10}>
+            <Input type="email" name="email" id="exampleEmail" placeholder="joedaniels@intiolabs.com" />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="exampleSelect" sm={2}>Platforms</Label>
+          <Col sm={10}>
+            <Input type="select" name="select" id="exampleSelect" multiple>
+              <option>Web</option>
+              <option>Mobile</option>
+              <option>Desktop</option>
+            </Input>
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="exampleText" sm={2}>Message</Label>
+          <Col sm={10}>
+            <Input type="textarea" name="text" id="exampleText" />
+          </Col>
+        </FormGroup>
+        <FormGroup row style={{float: 'right', marginRight: '5px'}}>
+            <Button color="success">Submit</Button>
+        </FormGroup>
+      </Form>
+        </Container>
         <Footer />
         {/*<Container dangerouslySetInnerHTML={{ __html: post.html }} />*/}
       </div>
