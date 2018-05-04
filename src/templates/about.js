@@ -109,23 +109,23 @@ class Template extends React.Component {
           <Container className="m3">
           <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
           <div className="mini-bar m2 center"></div>
-          <Form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <Form name="contact" method="post" netlify>
         <FormGroup row >
           <Label for="exampleEmail" sm={2}>Name</Label>
           <Col sm={10}>
-            <Input type="text" name="name" id="name" placeholder="Joe Daniels" />
+            <Input type="text" name="name" placeholder="Joe Daniels" />
           </Col>
         </FormGroup>
         <FormGroup row >
           <Label for="exampleEmail" sm={2}>Email</Label>
           <Col sm={10}>
-            <Input type="email" name="email" id="email" placeholder="joedaniels@intiolabs.com" />
+            <Input type="email" name="email" placeholder="joedaniels@intiolabs.com" />
           </Col>
         </FormGroup>
         <FormGroup row>
           <Label for="exampleSelect" sm={2}>Platforms</Label>
           <Col sm={10}>
-            <Input type="select" name="platform" id="platform" multiple>
+            <Input type="select" name="platform" multiple>
               <option>Web</option>
               <option>Mobile</option>
               <option>Desktop</option>
@@ -135,11 +135,11 @@ class Template extends React.Component {
         <FormGroup row>
           <Label for="exampleText" sm={2}>Message</Label>
           <Col sm={10}>
-            <Input type="textarea" name="message" id="message" />
+            <Input type="textarea" name="message" />
           </Col>
         </FormGroup>
         <FormGroup row style={{float: 'right', marginRight: '5px'}}>
-            <Button color="success">Submit</Button>
+            <Button type="submit" color="success">Submit</Button>
         </FormGroup>
       </Form>
         </Container>
