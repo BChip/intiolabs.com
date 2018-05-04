@@ -113,19 +113,19 @@ class Template extends React.Component {
         <FormGroup row >
           <Label for="exampleEmail" sm={2}>Name</Label>
           <Col sm={10}>
-            <Input type="email" name="email" id="exampleEmail" placeholder="Joe Daniels" />
+            <Input type="text" name="name" id="name" placeholder="Joe Daniels" />
           </Col>
         </FormGroup>
         <FormGroup row >
           <Label for="exampleEmail" sm={2}>Email</Label>
           <Col sm={10}>
-            <Input type="email" name="email" id="exampleEmail" placeholder="joedaniels@intiolabs.com" />
+            <Input type="email" name="email" id="email" placeholder="joedaniels@intiolabs.com" />
           </Col>
         </FormGroup>
         <FormGroup row>
           <Label for="exampleSelect" sm={2}>Platforms</Label>
           <Col sm={10}>
-            <Input type="select" name="select" id="exampleSelect" multiple>
+            <Input type="select" name="platform" id="platform" multiple>
               <option>Web</option>
               <option>Mobile</option>
               <option>Desktop</option>
@@ -135,7 +135,7 @@ class Template extends React.Component {
         <FormGroup row>
           <Label for="exampleText" sm={2}>Message</Label>
           <Col sm={10}>
-            <Input type="textarea" name="text" id="exampleText" />
+            <Input type="textarea" name="message" id="message" />
           </Col>
         </FormGroup>
         <FormGroup row style={{float: 'right', marginRight: '5px'}}>
