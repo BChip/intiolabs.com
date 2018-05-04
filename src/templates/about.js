@@ -109,7 +109,7 @@ class Template extends React.Component {
           <Container className="m3">
           <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
           <div className="mini-bar m2 center"></div>
-          <Form name="contact" method="post" netlify>
+          <Form name="contact" method="POST" netlify>
         <FormGroup row >
           <Label for="exampleEmail" sm={2}>Name</Label>
           <Col sm={10}>
@@ -139,6 +139,7 @@ class Template extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row style={{float: 'right', marginRight: '5px'}}>
+            <div data-netlify-recaptcha></div>
             <Button type="submit" color="success">Submit</Button>
         </FormGroup>
       </Form>
