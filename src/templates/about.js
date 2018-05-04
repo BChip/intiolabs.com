@@ -109,40 +109,37 @@ class Template extends React.Component {
           <Container className="m3">
           <h1 className='display-5 text-center grey'>Contact<span className="green">{'(  )'}</span></h1>
           <div className="mini-bar m2 center"></div>
-          <Form name="contact" method="POST" netlify>
-        <FormGroup row >
-          <Label for="exampleEmail" sm={2}>Name</Label>
-          <Col sm={10}>
-            <Input type="text" name="name" placeholder="Joe Daniels" />
-          </Col>
-        </FormGroup>
-        <FormGroup row >
-          <Label for="exampleEmail" sm={2}>Email</Label>
-          <Col sm={10}>
-            <Input type="email" name="email" placeholder="joedaniels@intiolabs.com" />
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="exampleSelect" sm={2}>Platforms</Label>
-          <Col sm={10}>
-            <Input type="select" name="platform" multiple>
-              <option>Web</option>
-              <option>Mobile</option>
-              <option>Desktop</option>
-            </Input>
-          </Col>
-        </FormGroup>
-        <FormGroup row>
-          <Label for="exampleText" sm={2}>Message</Label>
-          <Col sm={10}>
-            <Input type="textarea" name="message" />
-          </Col>
-        </FormGroup>
-        <FormGroup row style={{float: 'right', marginRight: '5px'}}>
-            <div data-netlify-recaptcha></div>
-            <Button type="submit" color="success">Submit</Button>
-        </FormGroup>
-      </Form>
+          <form name="contact" method="POST" netlify>
+            <div class="row form-group">
+              <label for="exampleEmail" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" name="name" placeholder="Joe Daniels" class="form-control" />
+              </div>
+            </div>
+            <div class="row form-group">
+              <label for="exampleEmail" class="col-sm-2 col-form-label" >Email</label>
+              <div class="col-sm-10">
+                <input type="email" name="email" placeholder="joedaniels@intiolabs.com" class="form-control" />
+              </div>
+            </div>
+            <div class="row form-group">
+              <label for="exampleSelect" class="col-sm-2 col-form-label">Platforms</label>
+              <div class="col-sm-10">
+                <select name="platform" multiple="" type="select" class="form-control">
+                  <option>Web</option><option >Mobile</option><option >Desktop</option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <label for="exampleText" class="col-sm-2 col-form-label">Message</label>
+              <div class="col-sm-10"><textarea name="message" type="textarea" class="form-control"></textarea>
+              </div>
+            </div>
+            <div style="float:right;margin-right:5px;" class="row form-group">
+              <div data-netlify-recaptcha="true"></div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
         </Container>
         <Footer />
         {/*<Container dangerouslySetInnerHTML={{ __html: post.html }} />*/}
