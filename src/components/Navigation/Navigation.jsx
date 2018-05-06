@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import NavigationDrawer from "react-md/lib/NavigationDrawers";
 import ToolbarActions from "../ToolbarActions/ToolbarActions";
-import Footer from "../Footer/Footer";
 import GetNavList from "./NavList";
 import "./Navigation.scss";
 
 class Navigation extends Component {
   render() {
     const { children, config, LocalTitle } = this.props;
-    const footerLinks = LocalTitle !== "About";
     return (
       <NavigationDrawer
         drawerTitle={config.siteTitle}
@@ -21,7 +19,6 @@ class Navigation extends Component {
         toolbarActions={<ToolbarActions config={config} />}
       >
         <div className="main-container">{children}</div>
-        <Footer userLinks={footerLinks} />
       </NavigationDrawer>
     );
   }

@@ -29,8 +29,15 @@ function GetNavList(config) {
   NavList.push({ divider: true });
 
   NavList.push({
+    primaryText: "Blog",
+    leftIcon: <FontIcon>view_module</FontIcon>,
+    component: Link,
+    to: "/blog/"
+  });
+
+  NavList.push({
     primaryText: "About",
-    leftIcon: <FontIcon>person</FontIcon>,
+    leftIcon: <FontIcon>supervisor_account</FontIcon>,
     component: Link,
     to: "/about/"
   });

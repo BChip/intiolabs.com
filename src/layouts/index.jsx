@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import "font-awesome/scss/font-awesome.scss";
 import Navigation from "../components/Navigation/Navigation";
+import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
 import "./index.scss";
 import "./global.scss";
@@ -22,6 +23,8 @@ export default class MainLayout extends React.Component {
       title = "Tags";
     } else if (currentPath === "categories") {
       title = "Categories";
+    } else if (currentPath === "blog") {
+      title = "Blog";
     } else if (currentPath === "about") {
       title = "About";
     } else if (currentPath.includes("posts")) {
@@ -42,16 +45,20 @@ export default class MainLayout extends React.Component {
     return title;
   }
   render() {
-    const { children } = this.props;
+    const { children, LocalTitle } = this.props;
+    const footerLinks = LocalTitle !== "About";
     return (
-      <Navigation config={config} LocalTitle={this.getLocalTitle()}>
-        <div>
-          <Helmet>
-            <meta name="description" content={config.siteDescription} />
-          </Helmet>
-          {children()}
-        </div>
-      </Navigation>
+      <React.Fragment>
+        <Navigation config={config} LocalTitle={this.getLocalTitle()}>
+          <div>
+            <Helmet>
+              <meta name="description" content={config.siteDescription} />
+            </Helmet>
+            {children()}
+          </div>
+        </Navigation>
+        <Footer></Footer>
+      </React.Fragment>
     );
   }
 }

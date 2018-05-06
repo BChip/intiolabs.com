@@ -8,7 +8,8 @@ import "./Footer.scss";
 class Footer extends Component {
   render() {
     const url = config.siteRss;
-    const { userLinks } = this.props;
+    const { userLinks, LocalTitle } = this.props;
+    const showRSS = LocalTitle === "Blog";
     const copyright = config.copyright;
     const fixedFooter = config.fixedFooter;
     if (!copyright) {
@@ -16,25 +17,24 @@ class Footer extends Component {
     }
     return (
       <footer className={fixedFooter ? "footer footer-fixed" : "footer"}>
-        {userLinks ? <UserLinks config={config} labeled /> : null}
         <div className="notice-container">
           <div className="copyright">
             <h4>{copyright}</h4>
           </div>
 
-          <div className="rss">
-            <Link to={url}>
-              <Button flat secondary iconClassName="fa fa-rss">
-                Subscribe
-              </Button>
-            </Link>
-          </div>
+          {showRSS &&
+            <div className="rss">
+              <Link to={url}>
+                <Button flat secondary iconClassName="fa fa-rss">
+                  Subscribe
+                </Button>
+              </Link>
+            </div>
+          }
+
           <div className="based-on">
             <h4>
-              Based on{" "}
-              <a href="https://github.com/Vagr9K/gatsby-material-starter">
-                Gatsby Material Starter
-              </a>.
+              All Rights Reserved.
             </h4>
           </div>
         </div>

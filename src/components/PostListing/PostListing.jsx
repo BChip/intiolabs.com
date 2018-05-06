@@ -1,5 +1,6 @@
 import React from "react";
 import PostPreview from "../PostPreview/PostPreview";
+import Paper from "react-md/lib/Cards/Card";
 
 class PostListing extends React.Component {
   getPostList() {
@@ -21,11 +22,11 @@ class PostListing extends React.Component {
     const postList = this.getPostList();
     return (
       <div className="md-grid md-grid--no-spacing md-cell--middle">
-        <div className="md-grid md-cell--8 mobile-fix">
-          {postList.map(post => (
-            <PostPreview key={post.title} postInfo={post} />
-          ))}
-        </div>
+          <div className="md-grid md-cell--8 mobile-fix">
+            {postList.map(post => (
+              <PostPreview key={post.title} postInfo={post} />
+            ))}
+          </div>
       </div>
     );
   }
