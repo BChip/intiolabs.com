@@ -1,10 +1,10 @@
 module.exports = {
-  blogPostDir: "posts", // The name of directory that contains your posts.
+  blogPostDir: "sample-posts", // The name of directory that contains your posts.
   siteTitle: "Intio Labs", // Site title.
   siteTitleAlt: "Intio Labs", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://intiolabs.com", // Domain of your website without pathPrefix.
-  pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+  pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: "Int(io) Labs create custom applications and technology based solutions that help our clients innovate and grow.",
   siteRss: "/rss.xml", // Path to the RSS file.
